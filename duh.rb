@@ -5,21 +5,21 @@
 class Duh < Formula
   desc "duh - a minimalist Docker UI that doesn't get in your way."
   homepage "https://github.com/yarlson/duh"
-  version "0.5.1"
+  version "0.5.2"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/yarlson/duh/releases/download/0.5.1/duh_0.5.1_darwin_amd64.tar.gz"
-      sha256 "0b10ce1c2525144d8dee57fbf65006a05c7c149963d5069de14caf8452bde4cb"
+      url "https://github.com/yarlson/duh/releases/download/0.5.2/duh_0.5.2_darwin_amd64.tar.gz"
+      sha256 "66863dee9513ecb8ce14f8637766443b91c9efdebf27cb1b6ec48bdae0629772"
 
       def install
         bin.install "duh"
       end
     end
     on_arm do
-      url "https://github.com/yarlson/duh/releases/download/0.5.1/duh_0.5.1_darwin_arm64.tar.gz"
-      sha256 "c7f134428a4cecbe06c9469734c880357ce333ee1db7bed9eeb8bb9a5302b56e"
+      url "https://github.com/yarlson/duh/releases/download/0.5.2/duh_0.5.2_darwin_arm64.tar.gz"
+      sha256 "22abc73c897d8f6e29de1d528e04826ee8fc656c60ce4a0c1edccda30e7e494a"
 
       def install
         bin.install "duh"
@@ -30,8 +30,8 @@ class Duh < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/yarlson/duh/releases/download/0.5.1/duh_0.5.1_linux_amd64.tar.gz"
-        sha256 "a58210f1fa9440fa13d8d536552b2cadf4c0fe4b0d8805783e7dabe8c0bdaad6"
+        url "https://github.com/yarlson/duh/releases/download/0.5.2/duh_0.5.2_linux_amd64.tar.gz"
+        sha256 "fd17c4b76afba41976c66ae63d1268e5c8d6f37a1ece18b7c36401714b825320"
 
         def install
           bin.install "duh"
@@ -40,8 +40,8 @@ class Duh < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/yarlson/duh/releases/download/0.5.1/duh_0.5.1_linux_arm64.tar.gz"
-        sha256 "2ad5f37158d4f1800c42126b6e2d4bf690daa8758f7b86c8b1df4b225e29d10a"
+        url "https://github.com/yarlson/duh/releases/download/0.5.2/duh_0.5.2_linux_arm64.tar.gz"
+        sha256 "0665722f0b34f8275f833ec3f0f41a0bd4e876ea59f3a0fef101c0e715ab0235"
 
         def install
           bin.install "duh"
