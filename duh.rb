@@ -5,21 +5,21 @@
 class Duh < Formula
   desc "duh - a minimalist Docker UI that doesn't get in your way."
   homepage "https://github.com/yarlson/duh"
-  version "0.5.2"
+  version "0.5.3"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/yarlson/duh/releases/download/0.5.2/duh_0.5.2_darwin_amd64.tar.gz"
-      sha256 "66863dee9513ecb8ce14f8637766443b91c9efdebf27cb1b6ec48bdae0629772"
+    if Hardware::CPU.intel?
+      url "https://github.com/yarlson/duh/releases/download/0.5.3/duh_0.5.3_darwin_amd64.tar.gz"
+      sha256 "95624bffbfc2df8915bf27fd485509a939384984e43f111e597d1aeb95f9bd7a"
 
       def install
         bin.install "duh"
       end
     end
-    on_arm do
-      url "https://github.com/yarlson/duh/releases/download/0.5.2/duh_0.5.2_darwin_arm64.tar.gz"
-      sha256 "22abc73c897d8f6e29de1d528e04826ee8fc656c60ce4a0c1edccda30e7e494a"
+    if Hardware::CPU.arm?
+      url "https://github.com/yarlson/duh/releases/download/0.5.3/duh_0.5.3_darwin_arm64.tar.gz"
+      sha256 "7dadc155ddefd2a6da1f9827438c628ed173a5230f6825ee8427a11ba18f92c6"
 
       def install
         bin.install "duh"
@@ -28,20 +28,20 @@ class Duh < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/yarlson/duh/releases/download/0.5.2/duh_0.5.2_linux_amd64.tar.gz"
-        sha256 "fd17c4b76afba41976c66ae63d1268e5c8d6f37a1ece18b7c36401714b825320"
+        url "https://github.com/yarlson/duh/releases/download/0.5.3/duh_0.5.3_linux_amd64.tar.gz"
+        sha256 "4e20f61ed45f2776a6a24014274e393b56dacab1e350a509f129f6499fbc0ea2"
 
         def install
           bin.install "duh"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/yarlson/duh/releases/download/0.5.2/duh_0.5.2_linux_arm64.tar.gz"
-        sha256 "0665722f0b34f8275f833ec3f0f41a0bd4e876ea59f3a0fef101c0e715ab0235"
+        url "https://github.com/yarlson/duh/releases/download/0.5.3/duh_0.5.3_linux_arm64.tar.gz"
+        sha256 "6d54f0d323ebf069cc716a07f727fa778385175f2b304be1f6b2cd79831294ea"
 
         def install
           bin.install "duh"
